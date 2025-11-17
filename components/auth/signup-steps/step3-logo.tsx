@@ -20,7 +20,7 @@ export function Step3Logo() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      updateFormData({ logo: file });
+      updateFormData({ logoFile: file });
 
       // Create preview
       const reader = new FileReader();
@@ -43,7 +43,7 @@ export function Step3Logo() {
   };
 
   const handleSkip = () => {
-    updateFormData({ logo: null });
+    updateFormData({ logoFile: null });
     setCurrentStep(4);
     router.push("/signup/step-4");
   };
@@ -83,9 +83,9 @@ export function Step3Logo() {
                 className="object-contain"
               />
             </div>
-            {formData.logo && (
+            {formData.logoFile && (
               <p className="text-sm text-muted-foreground">
-                {formData.logo.name}
+                {formData.logoFile.name}
               </p>
             )}
           </div>

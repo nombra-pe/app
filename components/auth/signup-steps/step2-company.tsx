@@ -67,6 +67,25 @@ export function Step2Company() {
           </RadioGroup>
         </Field>
 
+        {formData.hasBusinessName === "tengo" && (
+          <Field>
+            <FieldLabel htmlFor="currentBusinessName">
+              ¿Cuál es el nombre actual de tu negocio? *
+            </FieldLabel>
+            <Input
+              id="currentBusinessName"
+              name="currentBusinessName"
+              type="text"
+              placeholder="Nombre de tu negocio"
+              value={formData.currentBusinessName}
+              onChange={(e) =>
+                updateFormData({ currentBusinessName: e.target.value })
+              }
+              required
+            />
+          </Field>
+        )}
+
         <Field>
           <FieldLabel htmlFor="productService">
             2. ¿Qué producto o servicio ofreces? *
@@ -171,6 +190,33 @@ export function Step2Company() {
             </div>
           </RadioGroup>
         </Field>
+
+        {formData.hasLogo === "tengo" && (
+          <Field>
+            <FieldLabel htmlFor="logoFile">
+              Sube tu logo *
+            </FieldLabel>
+            <FieldDescription>
+              Formatos aceptados: PNG, JPG, SVG (máx. 5MB)
+            </FieldDescription>
+            <Input
+              id="logoFile"
+              name="logoFile"
+              type="file"
+              accept="image/png,image/jpeg,image/svg+xml"
+              onChange={(e) => {
+                const file = e.target.files?.[0] || null;
+                if (file && file.size > 5 * 1024 * 1024) {
+                  alert("El archivo no debe superar 5MB");
+                  e.target.value = "";
+                  return;
+                }
+                updateFormData({ logoFile: file });
+              }}
+              required
+            />
+          </Field>
+        )}
 
         <Field>
           <FieldLabel htmlFor="salesLocation">8. ¿Dónde vendes? *</FieldLabel>

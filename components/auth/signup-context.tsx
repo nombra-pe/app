@@ -30,6 +30,7 @@ export type SignUpData = {
 
   // Paso 2: Información del Negocio
   hasBusinessName: BusinessNameStatus;
+  currentBusinessName: string;
   productService: string;
   targetAudience: string;
   brandValues: string;
@@ -38,6 +39,7 @@ export type SignUpData = {
   keyWord3: string;
   nameIdea: string;
   hasLogo: LogoStatus;
+  logoFile: File | null;
   salesLocation: string;
   nameLanguage: NameLanguage;
 
@@ -79,6 +81,7 @@ export function SignUpProvider({ children }: { children: ReactNode }) {
 
     // Paso 2: Información del Negocio
     hasBusinessName: "",
+    currentBusinessName: "",
     productService: "",
     targetAudience: "",
     brandValues: "",
@@ -87,6 +90,7 @@ export function SignUpProvider({ children }: { children: ReactNode }) {
     keyWord3: "",
     nameIdea: "",
     hasLogo: "",
+    logoFile: null,
     salesLocation: "",
     nameLanguage: "",
   });
