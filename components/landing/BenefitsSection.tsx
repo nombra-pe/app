@@ -80,7 +80,7 @@ export default function BenefitsSection() {
         </Card>
       </div>
 
-      <div className="flex flex-wrap gap-3 relative overflow-hidden w-full mt-10 items-center justify-center">
+      <div className="flex flex-wrap gap-3 relative w-full mt-10 items-center justify-center">
         <div
           className="flex items-center gap-3 whitespace-nowrap"
           style={{

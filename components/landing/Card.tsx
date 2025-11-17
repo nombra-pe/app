@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export interface Props {
   children?: ReactNode;
   className?: string;
-  variant?: "default" | "elevated" | "highlighted";
+  variant?: "default" | "elevated" | "highlighted" | "black";
   padding?: "sm" | "md" | "lg";
 }
 
@@ -12,6 +12,8 @@ const variantClasses = {
   elevated: "bg-white ring-1 ring-black/5 shadow-[0_6px_24px_rgba(0,0,0,0.08)]",
   highlighted:
     "bg-white ring-1 ring-black/5 shadow-[0_12px_30px_rgba(0,0,0,0.06)]",
+  black:
+    "bg-black ring-1 ring-black/5 shadow-[0_12px_30px_rgba(0,0,0,0.06)]",
 };
 
 const paddingClasses = {

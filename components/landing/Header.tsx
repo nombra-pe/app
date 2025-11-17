@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const menuItems = [
     { href: "#inicio", label: "Inicio" },
@@ -39,12 +40,15 @@ export default function Header() {
                         </nav>
 
                         <div className="hidden md:flex items-center gap-3">
-                            <Link
-                                href="/signin"
-                                className="text-sm font-medium transition text-black/80 hover:text-black font-nunito"
-                            >
-                                App
-                            </Link>
+                            <Button asChild >
+                                <Link
+                                    href="/signin"
+                                    className="text-sm font-medium transition text-black/80 hover:text-black font-nunito"
+                                >
+                                    Inicia ahora
+                                </Link>
+                            </Button>
+
                         </div>
 
                         <button

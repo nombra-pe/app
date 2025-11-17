@@ -2,6 +2,7 @@ import Link from "next/link";
 import Card from "./Card";
 import SectionHeader from "./SectionHeader";
 import Section from "./Sections";
+import { Button } from "../ui/button";
 
 export default function PricingSection() {
   return (
@@ -72,23 +73,11 @@ export default function PricingSection() {
             </label>
           </div>
 
-          <Link href="#contacto" className="w-full">
-            Comenzar Ahora
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </Link>
+          <Button asChild variant="default">
+            <Link href="#contacto">
+              Comenzar Ahora
+            </Link>
+          </Button>
         </Card>
 
         <Card variant="highlighted">
@@ -152,27 +141,15 @@ export default function PricingSection() {
             </label>
           </div>
 
-          <Link href="#contacto" className="w-full">
-            Comenzar Ahora
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </Link>
+          <Button asChild variant="default">
+            <Link href="#contacto">
+              Comenzar Ahora
+            </Link>
+          </Button>
         </Card>
 
         <Card
-          variant="highlighted"
+          variant="black"
           className="bg-neutral-900 text-white border-neutral-800"
         >
           <div className="mb-8">
@@ -225,29 +202,11 @@ export default function PricingSection() {
               </li>
             ))}
           </ul>
-
-          <Link
-            href="#contacto"
-            // variant="secondary"
-            className="w-full bg-white text-neutral-900 hover:bg-neutral-100"
-          >
-            Comenzar Ahora
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-neutral-900"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </Link>
+          <Button asChild variant="secondary">
+            <Link href="#contacto">
+              Comenzar Ahora
+            </Link>
+          </Button>
         </Card>
       </div>
     </Section>
