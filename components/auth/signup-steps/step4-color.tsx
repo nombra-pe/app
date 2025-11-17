@@ -39,15 +39,15 @@ export function Step4Color() {
       formDataToSend.append("email", formData.email);
       formDataToSend.append("password", formData.password);
       formDataToSend.append("confirm-password", formData.confirmPassword);
-      formDataToSend.append("companyName", formData.companyName);
-      if (formData.logo) {
-        formDataToSend.append("logo", formData.logo);
+      formDataToSend.append("companyName", formData.businessName);
+      if (formData.logoFile) {
+        formDataToSend.append("logo", formData.logoFile);
       }
       formDataToSend.append("color", formData.color);
 
       // Call the register action
       const result = await actions.auth.registerUserAction(
-        null,
+        { success: false, message: "" },
         formDataToSend
       );
 

@@ -43,7 +43,10 @@ export type SignUpData = {
   salesLocation: string;
   nameLanguage: NameLanguage;
 
-  // Paso 3: Pago (estos campos se pueden manejar de forma separada)
+  // Paso 3: Logo y Color
+  color: string;
+
+  // Paso 4: Pago (estos campos se pueden manejar de forma separada)
 };
 
 type SignUpContextType = {
@@ -93,6 +96,9 @@ export function SignUpProvider({ children }: { children: ReactNode }) {
     logoFile: null,
     salesLocation: "",
     nameLanguage: "",
+
+    // Paso 3: Logo y Color
+    color: "#3b82f6",
   });
 
   const updateFormData = (data: Partial<SignUpData>) => {
