@@ -1,11 +1,18 @@
+"use client";
 import { GalleryVerticalEnd } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { SignupSummary } from "@/components/auth/signup-steps/signup-summary";
+import { SignUpProvider } from "@/components/auth/signup-context";
 
 export default function AuthLayout({
   children,
 }: {
   readonly children: React.ReactNode;
 }) {
-  return (
+  const pathname = usePathname();
+  const isSignupFlow = pathname?.startsWith("/signup");
+
+  const content = (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
@@ -20,13 +27,24 @@ export default function AuthLayout({
           <div className="w-full max-w-xs">{children}</div>
         </div>
       </div>
-      <div className="bg-muted relative hidden lg:block">
-        <img
-          src="/globe.svg"
-          alt="Background"
-          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
-        />
-      </div>
+
+      {isSignupFlow ? (
+        <SignupSummary />
+      ) : (
+        <div className="bg-muted relative hidden lg:block">
+          <img
+            src="/globe.svg"
+            alt="Background"
+            className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+          />
+        </div>
+      )}
     </div>
   );
+
+  if (isSignupFlow) {
+    return <SignUpProvider>{content}</SignUpProvider>;
+  }
+
+  return content;
 }
