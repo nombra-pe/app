@@ -1,3 +1,5 @@
+'use client'
+
 import Section from "./Sections";
 
 export default function AboutSection() {
@@ -130,7 +132,7 @@ export default function AboutSection() {
               }}
             ></div>
             <img
-              src="https://media.licdn.com/dms/image/v2/C4E03AQF3xUo7zEVtCg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1662911570671?e=1762992000&v=beta&t=BvuhH5gigrea5v-WBwEU91tyk7nQpjf9oT4ReGEQDek"
+              src="./avatar.jpeg"
               alt="Founder avatar"
               className="ring-1 ring-black/5 w-12 h-12 object-cover rounded-full shadow-[0_6px_20px_rgba(0,0,0,0.18)]"
             />
@@ -141,27 +143,27 @@ export default function AboutSection() {
         </div>
       </div>
 
-      {/* <style>
+      <style jsx>{`
         @keyframes lyricFadeIn {
-          0 % {
+          0% {
             opacity: 0;
             transform: translateY(20px) scale(0.95);
           }
-      100% {
-          opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
 
         .lyric-line {
           transition: all 0.3s ease;
-    }
+        }
 
         .lyric-line:hover {
           transform: scale(1.05);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-      </style> */}
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+      `}</style>
     </Section>
   );
 }

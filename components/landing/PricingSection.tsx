@@ -49,9 +49,9 @@ export default function PricingSection() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="text-emerald-500 flex-shrink-0"
                 >
                   <path d="M20 6 9 17l-5-5" />
@@ -81,9 +81,9 @@ export default function PricingSection() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
@@ -129,9 +129,9 @@ export default function PricingSection() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="text-emerald-500 flex-shrink-0"
                 >
                   <path d="M20 6 9 17l-5-5" />
@@ -161,9 +161,9 @@ export default function PricingSection() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
@@ -214,9 +214,9 @@ export default function PricingSection() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="text-emerald-400 flex-shrink-0"
                 >
                   <path d="M20 6 9 17l-5-5" />
@@ -239,9 +239,9 @@ export default function PricingSection() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="text-neutral-900"
             >
               <path d="M5 12h14"></path>

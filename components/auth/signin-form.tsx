@@ -2,11 +2,12 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { actions } from "@/actions";
 import { useActionState } from "react";
 import { FormState } from "@/validations/auth";
+import Link from "next/link";
 
 const INITIAL_STATE: FormState = {
   success: false,
@@ -58,6 +59,20 @@ export function SignInForm() {
         </Field>
         <Field>
           <Button type="submit">Login</Button>
+        </Field>
+        <FieldSeparator>Or continue with</FieldSeparator>
+        <Field>
+
+          <FieldDescription className="text-center">
+            Don&apos;t have an account?{" "}
+            <Link
+              type="button"
+              href="/signup"
+              className="underline underline-offset-4 hover:text-primary"
+            >
+              Sign up
+            </Link>
+          </FieldDescription>
         </Field>
       </FieldGroup>
     </form>

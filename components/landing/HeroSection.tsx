@@ -1,4 +1,4 @@
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 export interface Props {
   video?: string;
@@ -14,9 +14,16 @@ export default function HeroSection({ video = "./fondo.mp4" }: Props) {
           muted
           playsInline
           loop
+          autoPlay
           preload="metadata"
-        ></video>
+        >
+
+
+          Your browser does not support the video tag.
+        </video>
       </div>
+
+
 
       <div className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 lg:pt-40">
         <div className="max-w-3xl">
@@ -42,9 +49,9 @@ export default function HeroSection({ video = "./fondo.mp4" }: Props) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="h-4 w-4"
               >
                 <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path>
@@ -63,9 +70,9 @@ export default function HeroSection({ video = "./fondo.mp4" }: Props) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="h-4 w-4"
               >
                 <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path>
